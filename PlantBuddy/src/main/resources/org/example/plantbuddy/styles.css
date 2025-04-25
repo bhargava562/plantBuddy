@@ -1,0 +1,82 @@
+#addplantButton, #backButton,#chooseImageButton,#saveButton,#waterbtn{
+    -fx-background-color : #20e034;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 30;
+}
+#fertilizebtn {
+    -fx-background-color:#f8d229;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 30;
+}
+#fertilizebtn:hover {
+    -fx-background-color: #e6dcdc;
+    -fx-text-fill:#f8d229;
+}
+#cancelbtn,#reportbtn {
+    -fx-background-color: #ff0000;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 30;
+}
+/* Add these styles to your existing styles.css file */
+
+.plant-tile {
+    -fx-background-color: white;
+    -fx-border-color: #20e034;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+.plant-tile:hover {
+    -fx-background-color: #f0f8f0;
+    -fx-border-color: #5cb300;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0);
+}
+
+.plant-name {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+#reportbtn {
+    -fx-background-color:#59cdff;
+}
+#cancelbtn:hover,#reportbtn:hover {
+    -fx-background-color: #e6dcdc;
+    -fx-text-fill: #ff0000;
+}
+#reportbtn:hover {
+    -fx-text-fill: #59cdff;
+}
+#backButton {
+    -fx-background-color: #5cb300;
+}
+#addplantButton:hover, #backButton:hover, #chooseImageButton:hover,#saveButton:hover, #waterbtn:hover {
+    -fx-background-color: #e6dcdc;
+    -fx-text-fill: #20e034;
+}
+#imageviewstyle {
+    -fx-border-color: #2E8B57;  /* Border Color */
+    -fx-border-width: 2px;      /* Border Thickness */
+    -fx-border-radius: 5px;     /* Rounded Corners */
+    -fx-background-color: #E0E0E0; /* Background Color (applies only if wrapped in a pane) */
+}
+.tab-pane .tab-header-area .tab {
+    -fx-pref-width: 25%;
+}
+
+.progress-indicator {
+    -fx-progress-color: #4CAF50; /* Change progress color */
+    -fx-background-color: transparent; /* Remove background */
+}
+
+.progress-indicator > .indicator {
+    -fx-background-color: white; /* Inner circle color */
+    -fx-background-radius: 50%; /* Make it circular */
+    -fx-padding: 10px; /* Adjust thickness */
+}
+
+
+

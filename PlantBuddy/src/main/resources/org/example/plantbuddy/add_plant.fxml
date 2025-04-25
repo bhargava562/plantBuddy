@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.plantbuddy.addplantController">
+   <top>
+      <Pane prefHeight="57.0" prefWidth="600.0" style="-fx-background-color: #20e034;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="306.0" layoutY="1.0" prefHeight="55.0" prefWidth="203.0" text="PLANT BUDDY" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="backButton" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#back" prefHeight="46.0" prefWidth="48.0" style="-fx-background-radius: 30;" text="&lt;" textFill="#090909">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="49.0" fitWidth="58.0" layoutX="667.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="495.0" prefWidth="725.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane layoutX="52.0" layoutY="19.0" prefHeight="486.0" prefWidth="620.0" style="-fx-background-color: #ffffff;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="480.0" prefWidth="615.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label layoutX="24.0" layoutY="28.0" text="Plant Name *">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="plantNameTextField" layoutX="150.0" layoutY="23.0" prefHeight="30.0" prefWidth="251.0" promptText="Enter plant Name">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="69.0" layoutY="84.0" text="Species">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="speciesTextField" layoutX="150.0" layoutY="79.0" prefHeight="30.0" prefWidth="251.0" promptText="Enter species (optional)">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="58.0" layoutY="138.0" text="Location">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="mylocation" layoutX="150.0" layoutY="135.0" prefHeight="25.0" prefWidth="252.0" />
+                        <Label layoutX="42.0" layoutY="191.0" text="Light Need">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="mylightneed" layoutX="150.0" layoutY="188.0" prefHeight="25.0" prefWidth="252.0" />
+                        <ImageView fx:id="plantImageView" fitHeight="140.0" fitWidth="155.0" layoutX="443.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="21.0" layoutY="241.0" text="Date Acquired">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="acquisitionDatePicker" layoutX="149.0" layoutY="238.0" prefHeight="25.0" prefWidth="253.0" />
+                        <Button fx:id="chooseImageButton" layoutX="443.0" layoutY="181.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="156.0" text="Choose Image" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="14.0" layoutY="285.0" text="Watering (Days)">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                        </Label>
+                        <Slider fx:id="myw" layoutX="149.0" layoutY="288.0" prefHeight="14.0" prefWidth="253.0" />
+                        <Label fx:id="mywater" layoutX="409.0" layoutY="286.0" text="0 days" />
+                        <Label layoutX="14.0" layoutY="323.0" text="Fertilizing (Days)">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                        </Label>
+                        <Slider fx:id="myf" layoutX="149.0" layoutY="326.0" prefHeight="14.0" prefWidth="253.0" />
+                        <Label fx:id="myfertilizing" layoutX="409.0" layoutY="324.0" text="0 days" />
+                        <Label layoutX="87.0" layoutY="365.0" text="Notes">
+                           <font>
+                              <Font name="Berlin Sans FB" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="notesTextArea" layoutX="150.0" layoutY="362.0" prefHeight="60.0" prefWidth="431.0" promptText="Add any care instructions or observations" />
+                        <Button fx:id="saveButton" layoutX="401.0" layoutY="434.0" mnemonicParsing="false" onAction="#savePlant" text="Save Plant">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cancelbtn" layoutX="221.0" layoutY="434.0" mnemonicParsing="false" onAction="#back" text="Cancel" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

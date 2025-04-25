@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.plantbuddy.plant_detailController">
+   <top>
+      <Pane prefHeight="57.0" prefWidth="600.0" style="-fx-background-color: #20e034;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="plantNameLabel" layoutX="303.0" layoutY="2.0" prefHeight="55.0" prefWidth="203.0" text="PLANT NAME" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button fx:id="backButton" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#back" prefHeight="46.0" prefWidth="48.0" style="-fx-background-radius: 30;" text="&lt;" textFill="#090909">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="49.0" fitWidth="58.0" layoutX="667.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Overview">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="plantImageView" fitHeight="251.0" fitWidth="248.0" layoutX="19.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../MD.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="334.0" layoutY="46.0" text="Plant Details">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="30.0" layoutY="298.0" text="Care Status">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="334.0" layoutY="98.0" text="Species:" textFill="#6b6b6b">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="335.0" layoutY="134.0" text="Location:" textFill="#6b6b6b">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="334.0" layoutY="171.0" text="Light Needs:" textFill="#6b6b6b">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="334.0" layoutY="202.0" text="Acquired:" textFill="#6b6b6b">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="334.0" layoutY="234.0" text="Watering:" textFill="#6b6b6b">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="333.0" layoutY="268.0" text="Fertilizing:" textFill="#6b6b6b">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="speciesLabel" layoutX="426.0" layoutY="96.0" prefHeight="20.0" prefWidth="245.0" text="Speciesno">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="locationLabel" layoutX="427.0" layoutY="132.0" prefHeight="20.0" prefWidth="255.0" text="Locationno">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lightNeedsLabel" layoutX="426.0" layoutY="169.0" prefHeight="20.0" prefWidth="255.0" text="lightneedno">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="acquiredLabel" layoutX="426.0" layoutY="200.0" prefHeight="20.0" prefWidth="255.0" text="Acquiredno">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="wateringLabel" layoutX="426.0" layoutY="232.0" prefHeight="20.0" prefWidth="255.0" text="Wateringno">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fertilizingLabel" layoutX="425.0" layoutY="266.0" prefHeight="20.0" prefWidth="249.0" text="Fertilizingno">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="335.0" text="Next Watering:" textFill="#6b6b6b">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="406.0" text="Next Fertilizing:" textFill="#6b6b6b">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ProgressBar fx:id="wateringProgressBar" layoutX="37.0" layoutY="363.0" prefWidth="200.0" progress="0.0" />
+                        <ProgressBar fx:id="fertilizingProgressBar" layoutX="37.0" layoutY="432.0" prefWidth="200.0" progress="0.0" />
+                        <Label fx:id="wateringDaysLabel" layoutX="250.0" layoutY="359.0" text="0 days">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fertilizingDaysLabel" layoutX="250.0" layoutY="427.0" text="0 days">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="waterbtn" layoutX="382.0" layoutY="347.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="165.0" text="Water Now">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="reportbtn" layoutX="590.0" layoutY="347.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="125.0" text="Report" textFill="#59cdff">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="fertilizebtn" layoutX="385.0" layoutY="413.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="163.0" text="Fertilize Now" textFill="#f8d229">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cancelbtn" layoutX="589.0" layoutY="413.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0" prefWidth="127.0" text="Cancel">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Care History">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Photos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Notes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
